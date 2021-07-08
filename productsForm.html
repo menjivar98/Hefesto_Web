@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de productos</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <form id="productsForm">
+            <label for="productId"> Product id</label><br>
+            <input type="text" name="productId" id="productId"><br>
+
+            <label for="marca">Marca</label><br>
+            <input type="text" name="marca" id="marca"><br>
+
+            <label for="modelo">Modelo</label><br>
+            <input type="text" name="modelo" id="modelo"><br>
+
+            <label for="sistema_operativo">Sistema operativo</label><br>
+            <input type="text" name="sistema_operativo" id="sistema_operativo"><br>
+
+            <label for="memoria">Memoria</label><br>
+            <input type="text" name="memoria" id="memoria"><br>
+
+            <label for="price">precio</label><br>
+            <input type="text" name="price" id="price"><br>
+
+            <label for="caracteristicas">Caracteristicas</label><br>
+            <input type="text" name="caracteristicas" id="caracteristicas"><br>
+
+            <label for="subCategory">Subcategoria</label><br>
+            <input type="text" name="subCategory" id="subCategory"><br>
+
+            <label for="image">Imagen (URL)</label><br>
+            <input type="text" name="image" id="image"><br>
+
+            <fieldset>
+                <legend>Tiendas</legend>
+
+                <label for="storeId">Store id</label><br>
+                <input type="text" name="storeId" id="storeId"><br>
+
+            </fieldset>
+            <br>
+
+            <button id="addBtn" class="btn waves-effect waves-light">Agregar producto</button>
+
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+    <script src="./productsFunctions.js"></script>
+</body>
+
+</html>
