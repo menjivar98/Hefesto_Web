@@ -1,8 +1,12 @@
-const userId = document.getElementById('userId')
-const firstName = document.getElementById('firstName')
-const lastName = document.getElementById('lastName')
+const storeId = document.getElementById('storeId')
+const storeName = document.getElementById('storeName')
+const description = document.getElementById('description')
+const logo = document.getElementById('logo')
+const correo = document.getElementById('correo')
+const latitude = document.getElementById('latitude')
+const longitude = document.getElementById('longitude')
+
 const addBtn = document.getElementById('addBtn')
-const number = document.getElementById('number')
 
 const database = firebase.database();
 const rootRef = database.ref("stores");
@@ -11,14 +15,26 @@ const rootRef = database.ref("stores");
 addBtn.addEventListener('click', (e) => {
     e.preventDefault()
     
-    rootRef.child(userId.value).set({
-        number: number.value
+    rootRef.child(storeId.value).set({
+        storeId: storeId.value,
+        storeName: storeName.value,
+        description: description.value,
+        logo: logo.value,
+        correo: correo.value,
+        
     })
     
-    const rootRef_2 = database.ref(`stores/${userId.value}`)
+    const rootRef_2 = database.ref(`stores/${storeId.value}`)
     
-    rootRef_2.child("fullname").set({
-        first_name: firstName.value,
-        last_name: lastName.value,
+
+    rootRef_2.child("coord").set({
+        latitude: latitude.value,
+        longitude: longitude.value
     })
+
+    rootRef_2.child("subcategorie").set({
+        prueba: "Prueba"
+    })
+
+
 })
