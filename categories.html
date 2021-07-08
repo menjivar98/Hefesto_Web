@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <form >
+
+            
+            <legend>Subcategoria</legend>
+            <label for="storeId"> Store id</label><br>
+            <input type="text" name="storeId" id="storeId"><br>
+
+            <label for="subCatName"> Nombre de la subcategoria</label><br>
+            <input type="text" name="subCatName" id="subCatName"><br>
+
+            <label for="icon"> Icono </label><br>
+            <input type="text" name="icon" id="icon"><br>
+
+            <label for="iconType"> Tipo de icono </label><br>
+            <input type="text" name="iconType" id="iconType"><br>
+
+
+            <button id="saveBtn" class="btn waves-effect waves-light">Save</button>
+
+        </form>
+
+
+
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyB-g2cfu7b3QJRPsYB4GhgeCaVidmpo9Ls",
+          authDomain: "prueba-9d13a.firebaseapp.com",
+          databaseURL: "https://prueba-9d13a-default-rtdb.firebaseio.com",
+          projectId: "prueba-9d13a",
+          storageBucket: "prueba-9d13a.appspot.com",
+          messagingSenderId: "465394014619",
+          appId: "1:465394014619:web:6e2beb41eaa66e14f5293e",
+          measurementId: "G-DBZFD55N2R"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+
+    <script src="./categories.js"></script>
+</body>
+</html>

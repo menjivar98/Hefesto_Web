@@ -5,6 +5,8 @@ const logo = document.getElementById('logo')
 const correo = document.getElementById('correo')
 const latitude = document.getElementById('latitude')
 const longitude = document.getElementById('longitude')
+const saveBtn = document.getElementById('saveBtn')
+
 
 const addBtn = document.getElementById('addBtn')
 
@@ -32,9 +34,21 @@ addBtn.addEventListener('click', (e) => {
         longitude: longitude.value
     })
 
-    rootRef_2.child("subcategorie").set({
+    /*rootRef_2.child("subcategorie").set({
         prueba: "Prueba"
     })
-
-
+    */
+    window.location.href ="categories.html"
+    
 })
+
+saveBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const rootRef_2 = database.ref(`stores/${storeId.value}`)
+    
+    rootRef_2.child("categorie").set({
+        prueba: "Prueba"
+    })
+})
+
