@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form>
+            <label for="storeId"> Store id</label><br>
+            <input type="text" name="storeId" id="storeId"><br>
+
+            <label for="storeName">Nombre de la tienda</label><br>
+            <input type="text" name="storeName" id="storeName"><br>
+            
+            <label for="description">Descripcion</label><br>
+            <textarea name="description" id="description" rows="6" cols="50" placeholder="Escribe una descripcion"></textarea>
+            <!--<input type="text" name="description" id="description"><br>-->
+            
+            <label for="logo">Logo</label><br>
+            <input type="url" name="logo" id="logo"><br>
+
+            <label for="correo">Correo</label><br>
+            <input type="email" name="correo" id="correo"><br>
+            
+            <label for="telefono">Telefono</label><br>
+            <input type="number" name="telefono" id="telefono"><br>
+            
+            
+            <legend>Coordenadas</legend>
+
+            <label for="latitude">latitude</label><br>
+            <input type="number" name="latitude" id="latitude"><br>
+                
+            <label for="longitude">longitude</label><br>
+            <input type="number" name="longitude" id="longitude"><br>
+            
+        <fieldset>
+                <legend>Subcategoria</legend>
+                <label for="subCategoryId"> Subcategory id</label><br>
+                <input type="text" name="subCategoryId" id="subCategoryId"><br>
+
+                <label for="subCatName"> Nombre de la subcategoria</label><br>
+                <input type="text" name="subCatName" id="subCatName"><br>
+
+                <label for="icon"> Icono </label><br>
+                <input type="text" name="icon" id="icon"><br>
+
+                <label for="iconType"> Tipo de icono </label><br>
+                <input type="text" name="iconType" id="iconType"><br>
+
+                <label for="color"> Color </label><br>
+                <input type="text" name="color" id="color"><br>
+            </fieldset>
+            
+        <button id="addBtn" class="btn waves-effect waves-light">Add</button>
+        
+        </form>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>  
+    <script src="../js/functions.js"></script>
+</body>
+</html>
