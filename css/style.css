@@ -4,9 +4,13 @@
     
 }
 
+#fondo{
+    background-color: black;
+}
+
 div {
     width: 100vw;
-    
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +19,7 @@ div {
 }
 
 form {
-    width: 400px;
+    width: 800px;
     border: solid 1px #ebebeb;
     padding: 5rem;
 

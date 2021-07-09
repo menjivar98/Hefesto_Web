@@ -31,6 +31,7 @@ const color = document.getElementById('color')
 //const saveBtn = document.getElementById('saveBtn')
 
 const addBtn = document.getElementById('addBtn')
+const addHome = document.getElementById('addHome')
 
 const database = firebase.database();
 const rootRef = database.ref("stores");
@@ -64,6 +65,12 @@ addBtn.addEventListener('click', (e) => {
         color: color.value,
     })
     /*window.location.href ="categories.html"*/
+})
+
+addHome.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    window.location.href="../index.html"
 })
 
 /*saveBtn.addEventListener('click', (e) => {

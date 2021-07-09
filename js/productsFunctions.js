@@ -27,7 +27,9 @@ const subCategory = document.getElementById('subCategory');
 const image = document.getElementById('image');
 const storeId = document.getElementById('storeId');
 
+
 const addBtn = document.getElementById('addBtn');
+const addHome = document.getElementById('addHome')
 
 
 addBtn.addEventListener('click', (e) => {
@@ -52,6 +54,12 @@ addBtn.addEventListener('click', (e) => {
     storesCollection.child("Stores").set(storesAux);
 
     document.getElementById("productsForm").reset();
+})
+
+addHome.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    window.location.href="../index.html"
 })
 
 /*
